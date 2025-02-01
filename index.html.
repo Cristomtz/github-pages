@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebee;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: #d32f2f;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #yesButton {
+            background-color: #e91e63;
+            color: white;
+        }
+
+        #noButton {
+            background-color: #757575;
+            color: white;
+            position: relative;
+        }
+
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+        <div class="buttons">
+            <button id="yesButton">Sí 💖</button>
+            <button id="noButton">No 😢</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById("yesButton").addEventListener("click", function() {
+            document.getElementById("message").innerText = "¡Sabía que dirías que sí! 💖";
+        });
+
+        document.getElementById("noButton").addEventListener("mouseover", function() {
+            let x = Math.random() * (window.innerWidth - this.clientWidth);
+            let y = Math.random() * (window.innerHeight - this.clientHeight);
+            this.style.position = "absolute";
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+        });
+    </script>
+</body>
+</html>
